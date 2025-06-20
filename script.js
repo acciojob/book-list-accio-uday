@@ -6,7 +6,7 @@ document.getElementById("submit").addEventListener("click", function (e) {
 	const author = document.getElementById("author").value.trim();
 	const isbn = document.getElementById("isbn").value.trim();
 
-	if(title === "" || author === "" || isbn === ""){
+	if(title === "" || author === "" || isbn === "") {
 		alert("Please fill all fields");
 		return;
 	}
@@ -14,7 +14,7 @@ document.getElementById("submit").addEventListener("click", function (e) {
 	const table = document.getElementById("book-list");
 	const row = document.createElement("tr");
 
-	row.innerHTML =`
+	row.innerHTML = `
 	<td>${title}</td>
 	<td>${author}</td>
 	<td>${isbn}</td>
@@ -30,7 +30,7 @@ document.getElementById("submit").addEventListener("click", function (e) {
 });
 
 // Event delegation for deleting rows
-document.getElementById("book-list").addEventListener("click",function (e) {
+document.getElementById("book-list").addEventListener("click", function (e) {
 	if (e.target.classList.contains("delete")) {
 		e.target.parentElement.parentElement.remove();
 	}
